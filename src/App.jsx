@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
 import './App.scss';
+import { Amplify } from 'aws-amplify';
+import awsExports from './aws-exports';
+import { withAuthenticator } from '@aws-amplify/ui-react';
+
+Amplify.configure(awsExports);
 
 function App() {
   const [message, setMessage] = useState('');
@@ -7,9 +12,24 @@ function App() {
 
   const sendMessage = () => {
     if (message.trim() !== '') {
-      setMessages([...messages, message]);
+      const newMessage = { text: message, type: 'user' };
+      setMessages([...messages, newMessage]);
+  
+      // Echo message
+      setTimeout(() => {
+        const echoMessage = { text: message, type: 'echo' };
+        setMessages((prevMessages) => [...prevMessages, echoMessage]);
+      }, 500);
+  
       setMessage('');
     }
+  };
+  
+
+  const forceSignOut = () => {
+    localStorage.clear();
+    sessionStorage.clear();
+    window.location.reload();
   };
 
   return (
@@ -17,7 +37,7 @@ function App() {
       <div className="chat-window">
         <div className="chat-messages">
           {messages.map((msg, index) => (
-            <div key={index} className="message">{msg}</div>
+            <div key={index} className={`message ${msg.type}`}>{msg.type === 'user' ? 'You' : 'Echo'}: {msg.text}</div>
           ))}
         </div>
         <div className="message-input">
@@ -30,10 +50,10 @@ function App() {
           />
           <button onClick={sendMessage}>Send</button>
         </div>
+        <button onClick={forceSignOut}>Force Sign Out</button>
       </div>
     </div>
   );
 }
 
-export default App;
-  
+export default withAuthenticator(App);

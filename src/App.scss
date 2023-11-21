@@ -35,6 +35,18 @@
   word-wrap: break-word;
 }
 
+.user {
+  background-color: #dcf8c6;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.echo {
+  background-color: #f1f0f0;
+  align-self: flex-start;
+  margin-right: auto;
+}
+
 .message-input {
   border-top: 1px solid #e0e0e0;
   padding: 10px;
@@ -67,3 +79,92 @@
     }
   }
 }
+
+/* General Styles for the Auth Container */
+.amplify-auth-container {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+/* Header Styles */
+.amplify-form-header {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.amplify-flex {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+.amplify-tabs__panel {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Form Section Styles */
+.amplify-form-section {
+  margin-bottom: 20px;
+}
+
+/* Input and Label Styles */
+.amplify-input, .amplify-input-label {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.amplify-input-label {
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* Button Styles */
+.amplify-button {
+  padding: 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.amplify-icon {
+  height: 1vh;
+}
+
+.amplify-tabs__list {
+  padding-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.amplify-button:hover {
+  background-color: #0056b3;
+}
+
+/* Link Styles */
+.amplify-a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.amplify-a:hover {
+  text-decoration: underline;
+}
+
+/* Custom Styles for Other Elements as Needed */
+

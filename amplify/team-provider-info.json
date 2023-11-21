@@ -1,0 +1,46 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-ryantalks-dev-175916-authRole",
+      "UnauthRoleArn": "arn:aws:iam::324700362029:role/amplify-ryantalks-dev-175916-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::324700362029:role/amplify-ryantalks-dev-175916-authRole",
+      "Region": "us-west-1",
+      "DeploymentBucketName": "amplify-ryantalks-dev-175916-deployment",
+      "UnauthRoleName": "amplify-ryantalks-dev-175916-unauthRole",
+      "StackName": "amplify-ryantalks-dev-175916",
+      "StackId": "arn:aws:cloudformation:us-west-1:324700362029:stack/amplify-ryantalks-dev-175916/c04cbb40-8423-11ee-9b97-02bd33aad687",
+      "AmplifyAppId": "d2kc5gcpsjzk4h",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-ryantalks-dev-175916-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
+    },
+    "categories": {
+      "auth": {
+        "ryantalks930a3134": {}
+      },
+      "function": {
+        "ryantalks930a3134DefineAuthChallenge": {
+          "deploymentBucketName": "amplify-ryantalks-dev-175916-deployment",
+          "s3Key": "amplify-builds/ryantalks930a3134DefineAuthChallenge-492b42454d734f476849-build.zip"
+        },
+        "ryantalks930a3134CreateAuthChallenge": {
+          "deploymentBucketName": "amplify-ryantalks-dev-175916-deployment",
+          "s3Key": "amplify-builds/ryantalks930a3134CreateAuthChallenge-7a6b6b2b65313538597a-build.zip"
+        },
+        "ryantalks930a3134VerifyAuthChallengeResponse": {
+          "RECAPTCHASECRET": "6LdAEREpAAAAAAYVb39YgmMKfxFtE5zi5u975OT9",
+          "deploymentBucketName": "amplify-ryantalks-dev-175916-deployment",
+          "s3Key": "amplify-builds/ryantalks930a3134VerifyAuthChallengeResponse-3731333665704e4d4832-build.zip"
+        },
+        "ryantalks930a3134CustomMessage": {
+          "REDIRECTURL": "http://localhost:3000/account-confirmed",
+          "EMAILSUBJECT": "RyanTalks: Please Activate Your Account",
+          "EMAILMESSAGE": "Hello,Thank you for signing up for RyanTalks! We",
+          "deploymentBucketName": "amplify-ryantalks-dev-175916-deployment",
+          "s3Key": "amplify-builds/ryantalks930a3134CustomMessage-43334a434a47542b3145-build.zip"
+        }
+      },
+      "api": {
+        "ryantalks": {}
+      }
+    }
+  }
+}
